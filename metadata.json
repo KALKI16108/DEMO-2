@@ -1,0 +1,6 @@
+{
+  "name": "Nova Dental",
+  "description": "A sophisticated dental clinic website featuring comprehensive services and modern dentistry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
