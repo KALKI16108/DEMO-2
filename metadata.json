@@ -1,6 +1,6 @@
 {
-  "name": "Nova Dental",
-  "description": "A sophisticated dental clinic website featuring comprehensive services and modern dentistry.",
+  "name": "Dr. Nidhi's Dental Clinic",
+  "description": "Best Dental Clinic in Goregaon West, Mumbai. Premium and gentle dental care with Dr. Nidhi.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

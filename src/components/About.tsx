@@ -18,7 +18,7 @@ export default function About() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl md:text-5xl lg:text-[52px] font-medium leading-[1.1] tracking-tight"
           >
-            At Nova Dental . we are dedicated to providing exceptional <span className="font-serif italic text-zinc-500 font-normal tracking-wide">dental care</span> in a warm , welcoming environment. Our experienced team uses the latest technology <span className="font-serif italic text-zinc-500 font-normal tracking-wide">to offer a range of treatments.</span>
+            At Dr. Nidhi's Dental Clinic . we are dedicated to providing exceptional <span className="font-serif italic text-zinc-500 font-normal tracking-wide">dental care</span> in a warm , welcoming environment in Goregaon West. Our experienced team uses the latest technology <span className="font-serif italic text-zinc-500 font-normal tracking-wide">to offer a range of treatments.</span>
           </motion.h2>
           
           <div className="flex flex-col md:flex-row gap-12 items-end">
@@ -29,7 +29,7 @@ export default function About() {
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               src="https://images.unsplash.com/photo-1590611936760-eeb9bc9cb885?auto=format&fit=crop&w=600&q=80" 
               alt="Happy patient smiling" 
-              className="w-full md:w-1/2 rounded-xl object-cover h-[400px] aspect-[4/5]"
+              className="w-full md:w-1/2 rounded-xl object-cover h-[300px] sm:h-[400px] aspect-[4/5]"
             />
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

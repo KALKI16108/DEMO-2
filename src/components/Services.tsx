@@ -4,16 +4,19 @@ import { cn } from "../lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 
 const services = [
-  // Placeholder images - Please replace these URLs with your specific 3D transparent PNG models.
-  { id: "01", title: "Aesthetic dentistry", col: 1, row: 1, img: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=200&q=80" },
-  { id: "02", title: "Veneers", col: 3, row: 1, img: "https://images.unsplash.com/photo-1598256989467-3eefa1cce3b8?auto=format&fit=crop&w=200&q=80" },
-  { id: "03", title: "Wisdom tooth extraction", col: 4, row: 1, img: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=200&q=80", description: "Wisdom tooth extraction is not a scary procedure at Nova Dental. Get professional help." },
-  { id: "04", title: "Implantation", col: 1, row: 2, img: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=200&q=80" },
-  { id: "05", title: "Orthodontic treatment", col: 2, row: 2, img: "https://images.unsplash.com/photo-1536340248066-e047cde6c579?auto=format&fit=crop&w=200&q=80" },
-  { id: "06", title: "Professional hygiene", col: 4, row: 2, img: "https://images.unsplash.com/photo-1520013915181-e23fadd35e23?auto=format&fit=crop&w=200&q=80" },
-  { id: "07", title: "Teeth whitening", col: 2, row: 3, img: "https://images.unsplash.com/photo-1445583934509-4c3affcbd00e?auto=format&fit=crop&w=200&q=80" },
-  { id: "08", title: "Surgical dentistry", col: 3, row: 3, img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=200&q=80" },
-  { id: "09", title: "Braces", col: 4, row: 3, img: "https://images.unsplash.com/photo-1506544777-64cfbea7e51c?auto=format&fit=crop&w=200&q=80" },
+  { id: "01", title: "Teeth whitening", col: 1, row: 1, img: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=200&q=80", description: "Breathe new life into your smile with advanced professional whitening systems." },
+  { id: "02", title: "Dental implants", col: 2, row: 1, img: "https://images.unsplash.com/photo-1598256989467-3eefa1cce3b8?auto=format&fit=crop&w=200&q=80", description: "Modern, secure teeth replacement utilizing premium titanium materials." },
+  { id: "03", title: "Braces & Aligners", col: 4, row: 1, img: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=200&q=80", description: "Straighten your smile with comfortable, customized invisible aligners." },
+  { id: "04", title: "Veneers & crowns", col: 1, row: 2, img: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=200&q=80", description: "Impeccably tailored, high-grade porcelain dental veneers." },
+  { id: "05", title: "Root canals", col: 2, row: 2, img: "https://images.unsplash.com/photo-1536340248066-e047cde6c579?auto=format&fit=crop&w=200&q=80", description: "Gentle root canal therapy executed with microscopic precision." },
+  { id: "06", title: "Laser dentistry", col: 4, row: 2, img: "https://images.unsplash.com/photo-1520013915181-e23fadd35e23?auto=format&fit=crop&w=200&q=80", description: "Minimally-invasive laser therapies for accurate oral procedures." },
+  { id: "07", title: "Cosmetic procedures", col: 2, row: 3, img: "https://images.unsplash.com/photo-1445583934509-4c3affcbd00e?auto=format&fit=crop&w=200&q=80", description: "Tailor-made smile designs that highlight and enhance your natural symmetry." },
+  { id: "08", title: "Oral surgery", col: 3, row: 3, img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=200&q=80", description: "Careful oral extractions and surgical care from dedicated specialists." },
+  { id: "09", title: "Paediatrics", col: 4, row: 3, img: "https://images.unsplash.com/photo-1506544777-64cfbea7e51c?auto=format&fit=crop&w=200&q=80", description: "Gentle, stress-free pediatric dentistry starting early hygiene habits." },
+];
+
+const allAdditionalServices = [
+  "Bonding", "Check-ups", "Dentures & bridges", "Emergency care", "Extractions", "Fillings and sealants", "Mouth guards", "Teeth cleaning", "Teeth reshaping", "X-ray"
 ];
 
 export default function Services() {
@@ -142,6 +145,30 @@ export default function Services() {
           );
         })}
       </div>
+
+      {/* Additional Services Cloud */}
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="mt-20 border-t border-zinc-200/60 pt-12"
+      >
+        <h4 className="text-xs font-bold tracking-widest uppercase opacity-50 mb-6 flex items-center gap-2">
+          <span className="w-1 h-1 rounded-full bg-zinc-900 block" />
+          Additional Specialized Procedures
+        </h4>
+        <div className="flex flex-wrap gap-2 md:gap-3">
+          {allAdditionalServices.map((tag) => (
+            <span
+              key={tag}
+              className="px-4 py-2 bg-white text-zinc-800 text-xs font-medium border border-zinc-200/50 rounded-full cursor-default hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all duration-300"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }
