@@ -27,7 +27,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              src="https://images.unsplash.com/photo-1590611936760-eeb9bc9cb885?auto=format&fit=crop&w=600&q=80" 
+              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80"
               alt="Happy patient smiling" 
               className="w-full md:w-1/2 rounded-xl object-cover h-[300px] sm:h-[400px] aspect-[4/5]"
             />

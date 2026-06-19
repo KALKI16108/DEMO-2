@@ -5,14 +5,14 @@ import { motion, AnimatePresence } from "motion/react";
 
 const services = [
   { id: "01", title: "Teeth whitening", col: 1, row: 1, img: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=200&q=80", description: "Breathe new life into your smile with advanced professional whitening systems." },
-  { id: "02", title: "Dental implants", col: 2, row: 1, img: "https://images.unsplash.com/photo-1598256989467-3eefa1cce3b8?auto=format&fit=crop&w=200&q=80", description: "Modern, secure teeth replacement utilizing premium titanium materials." },
+  { id: "02", title: "Dental implants", col: 2, row: 1, img: "https://loremflickr.com/300/300/dentist,implant?random=2", description: "Modern, secure teeth replacement utilizing premium titanium materials." },
   { id: "03", title: "Braces & Aligners", col: 4, row: 1, img: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=200&q=80", description: "Straighten your smile with comfortable, customized invisible aligners." },
   { id: "04", title: "Veneers & crowns", col: 1, row: 2, img: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=200&q=80", description: "Impeccably tailored, high-grade porcelain dental veneers." },
-  { id: "05", title: "Root canals", col: 2, row: 2, img: "https://images.unsplash.com/photo-1536340248066-e047cde6c579?auto=format&fit=crop&w=200&q=80", description: "Gentle root canal therapy executed with microscopic precision." },
-  { id: "06", title: "Laser dentistry", col: 4, row: 2, img: "https://images.unsplash.com/photo-1520013915181-e23fadd35e23?auto=format&fit=crop&w=200&q=80", description: "Minimally-invasive laser therapies for accurate oral procedures." },
-  { id: "07", title: "Cosmetic procedures", col: 2, row: 3, img: "https://images.unsplash.com/photo-1445583934509-4c3affcbd00e?auto=format&fit=crop&w=200&q=80", description: "Tailor-made smile designs that highlight and enhance your natural symmetry." },
-  { id: "08", title: "Oral surgery", col: 3, row: 3, img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=200&q=80", description: "Careful oral extractions and surgical care from dedicated specialists." },
-  { id: "09", title: "Paediatrics", col: 4, row: 3, img: "https://images.unsplash.com/photo-1506544777-64cfbea7e51c?auto=format&fit=crop&w=200&q=80", description: "Gentle, stress-free pediatric dentistry starting early hygiene habits." },
+  { id: "05", title: "Root canals", col: 2, row: 2, img: "https://loremflickr.com/300/300/dentist,tooth?random=5", description: "Gentle root canal therapy executed with microscopic precision." },
+  { id: "06", title: "Laser dentistry", col: 4, row: 2, img: "https://loremflickr.com/300/300/dentist,laser?random=6", description: "Minimally-invasive laser therapies for accurate oral procedures." },
+  { id: "07", title: "Cosmetic procedures", col: 2, row: 3, img: "https://loremflickr.com/300/300/dentist,smile?random=7", description: "Tailor-made smile designs that highlight and enhance your natural symmetry." },
+  { id: "08", title: "Oral surgery", col: 3, row: 3, img: "https://loremflickr.com/300/300/dentist,surgery?random=8", description: "Careful oral extractions and surgical care from dedicated specialists." },
+  { id: "09", title: "Paediatrics", col: 4, row: 3, img: "https://loremflickr.com/300/300/dentist,child?random=9", description: "Gentle, stress-free pediatric dentistry starting early hygiene habits." },
 ];
 
 const allAdditionalServices = [
@@ -94,11 +94,11 @@ export default function Services() {
               )}
             >
               <div className="flex justify-between items-start w-full relative z-10">
-                <div className="w-24 h-20 rounded-lg overflow-hidden mix-blend-multiply group-hover:mix-blend-normal transition-all duration-500">
+                <div className="w-24 h-20 rounded-lg overflow-hidden bg-white ring-1 ring-zinc-900/5 group-hover:ring-white/20 transition-all duration-500 mt-2">
                   <img 
                     src={cell.service.img} 
                     alt={cell.service.title} 
-                    className="w-full h-full object-cover filter grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-110 origin-center" 
+                    className="w-full h-full object-cover filter grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-110 origin-center" 
                   />
                 </div>
                 <div className="text-xs font-medium opacity-60 transition-opacity whitespace-nowrap">
